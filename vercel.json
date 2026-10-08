@@ -2,7 +2,15 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/api/:path*",
+      "destination": "https://taken-hamilton-holder-nail.trycloudflare.com/api/:path*"
+    },
+    {
+      "source": "/auth/:path*",
+      "destination": "https://taken-hamilton-holder-nail.trycloudflare.com/auth/:path*"
+    },
+    {
+      "source": "/((?!assets/|favicon.ico|site.webmanifest|manifest.json).*)",
       "destination": "/index.html"
     }
   ]
